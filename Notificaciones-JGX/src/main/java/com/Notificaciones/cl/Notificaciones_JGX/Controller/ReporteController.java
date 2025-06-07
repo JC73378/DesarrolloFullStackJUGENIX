@@ -35,7 +35,7 @@ public class ReporteController {
     return ResponseEntity.ok(reportes);
   }
 
-  @PostMapping
+  @PostMapping("/crear")
   public ResponseEntity<Reportes> guardar(@RequestBody Reportes reporte) {
      Reportes reportenuevo= reportesService.saveReporte(reporte);
       return ResponseEntity.status(HttpStatus.CREATED).body(reportenuevo);
